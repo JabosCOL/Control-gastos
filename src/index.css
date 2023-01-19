@@ -79,7 +79,14 @@ header h1 {
 }
 .formulario .campo {
     display: grid;
-    margin-bottom: 2rem;
+    width: 85%;
+    margin: 0 auto 2rem auto;
+}
+
+@media (min-width: 768px) {
+    .formulario .campo {
+        width: 100%;
+    }
 }
 
 .formulario label {
@@ -181,10 +188,11 @@ header h1 {
         margin-bottom: 0;
     }
 }
-.formulario input[type="text"].nuevo-presupuesto, 
+.formulario input[type="text"].nuevo-presupuesto,
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+    width: 100%;
 }
 
 .contenedor-presupuesto svg {
@@ -235,10 +243,16 @@ main {
     padding-top: 10rem;
 }
 
-.filtros .campo {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.filtros {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .filtros .campo {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
 }
 .filtros label {
     font-size: 3rem;
@@ -252,6 +266,7 @@ main {
     border-radius: 1rem;
     text-align: center;
     background-color: var(--gris-claro);
+    margin-top: 1rem;
 }
 
 .listado-gastos {
@@ -267,24 +282,29 @@ main {
 }
 
 .gasto {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
+}
+@media (min-width: 768px) {
+    .gasto {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
 }
 
 .cantidad-gasto {
     font-size: 2.4rem;
     color: var(--negro);
     font-weight: 900;
+    text-align: center;
 }
 
 .contenido-gasto {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    column-gap: 2rem;
 }
 
 .contenido-gasto img {
@@ -347,6 +367,7 @@ main {
     top: 3rem;
     width: 3rem;
     height: 3rem;
+    z-index: 1;
 }
 .modal .cerrar-modal img {
     width: 100%;
