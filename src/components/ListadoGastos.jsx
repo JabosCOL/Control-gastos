@@ -24,6 +24,7 @@ const ListadoGastos = ({
       ) : (
         <>
           <h2>{gastos.length ? "Gastos" : "No hay gastos aún"}</h2>
+          <h3>{gastos.length ? '"Desliza tus gastos para interactuar con ellos 👌"' : ""}</h3>
           {gastos.map((gasto) => (
             <Gasto
               key={gasto.id}
